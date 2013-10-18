@@ -1,6 +1,5 @@
-
 # DockerDNA Base 12.04.w1: 
-## Ubuntu 12.04
+## Ubuntu 12.04 + Ansible
 
 ### Run this container:
 
