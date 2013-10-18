@@ -20,6 +20,6 @@ RUN ( echo '[docker-dna_zookeeper]' && \
       && ansible-playbook ./DockerDNA/dna.yml --connection=local
 
 # Expose ZooKeeper
-EXPOSE 2181
+EXPOSE 2181 2888 3888
 ENTRYPOINT ["/usr/lib/zookeeper/bin/zkServer.sh"]
 CMD ["--help"]
