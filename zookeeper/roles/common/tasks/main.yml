@@ -1,0 +1,4 @@
+---
+# file: roles/common/tasks/main.yml
+
+- include: install_openjdk.yml

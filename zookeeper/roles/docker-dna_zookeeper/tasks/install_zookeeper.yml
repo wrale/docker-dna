@@ -1,0 +1,24 @@
+---
+# file: roles/docker-dna_zookeeper/tasks/install_zookeeper.yml
+
+- name: Obtain Cloudera CDH4 repository key
+  apt_key: url=http://archive.cloudera.com/cdh4/ubuntu/precise/amd64/cdh/archive.key
+           state=present
+
+- name: Add Cloudera CDH4 repository
+  apt_repository: repo='deb [arch=amd64] http://archive.cloudera.com/cdh4/ubuntu/precise/amd64/cdh precise-cdh4 contrib' 
+                  state=present
+
+- name: Update apt cache
+  apt: update_cache=yes
+
+- name: Install ZooKeeper Server
+  apt: pkg={{ item }} 
+       state=present
+  with_items:
+    - zookeeper
+    - zookeeper-server
+
+- name: Configure ZooKeeper
+  template: src=zoo.cfg.j2 
+            dest=/etc/zookeeper/conf/zoo.cfg

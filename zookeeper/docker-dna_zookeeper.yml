@@ -1,0 +1,6 @@
+---
+# file: docker-dna_zookeeper.yml
+- hosts: docker-dna_zookeeper
+  roles:
+    - common
+    - docker-dna_zookeeper

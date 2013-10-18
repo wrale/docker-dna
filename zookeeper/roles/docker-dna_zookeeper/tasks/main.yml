@@ -1,0 +1,4 @@
+---
+# file: roles/docker-dna_zookeeper/tasks/main.yml
+
+- include: install_zookeeper.yml
