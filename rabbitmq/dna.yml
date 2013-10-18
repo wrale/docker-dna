@@ -1,0 +1,3 @@
+---
+# file: dna.yml
+- include: docker-dna_rabbitmq.yml

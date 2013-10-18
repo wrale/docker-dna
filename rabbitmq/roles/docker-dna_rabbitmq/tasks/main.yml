@@ -1,0 +1,4 @@
+---
+# file: roles/docker-dna_rabbitmq/tasks/main.yml
+
+- include: install_rabbitmq.yml

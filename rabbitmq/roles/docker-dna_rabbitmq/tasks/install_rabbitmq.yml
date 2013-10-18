@@ -1,0 +1,23 @@
+---
+# file: roles/docker-dna_rabbitmq/tasks/install_rabbitmq.yml
+
+- name: Obtain RabbitMQ public key
+  apt_key: url=http://www.rabbitmq.com/rabbitmq-signing-key-public.asc
+           state=present
+
+- name: Add RabbitMQ repository
+  apt_repository: repo='deb http://www.rabbitmq.com/debian/ testing main' 
+                  state=present
+
+- name: Update apt cache
+  apt: update_cache=yes
+
+- name: Install RabbitMQ server
+  apt: pkg={{ item }} 
+       state=present
+  with_items:
+    - rabbitmq-server
+
+#- name: Configure RabbitMQ server
+#  template: src=rabbitmq.config.j2
+#            dest=/etc/rabbitmq/rabbitmq.config

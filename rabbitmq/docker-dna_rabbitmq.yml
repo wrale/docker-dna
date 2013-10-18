@@ -1,0 +1,6 @@
+---
+# file: docker-dna_rabbitmq.yml
+- hosts: docker-dna_rabbitmq
+  roles:
+    - common
+    - docker-dna_rabbitmq
