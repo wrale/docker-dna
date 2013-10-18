@@ -17,7 +17,8 @@ ADD . ./DockerDNA
 RUN ( echo '[docker-dna_zookeeper]' && \
       echo 'localhost' \
     ) > /etc/ansible/hosts \
-      && ansible-playbook ./DockerDNA/dna.yml --connection=local
+      && ansible-playbook ./DockerDNA/dna.yml --connection=local \
+      && apt-get clean      
 
 # Expose ZooKeeper
 EXPOSE 2181 2888 3888
