@@ -2,7 +2,7 @@
 #
 # VERSION    3.4.5.w1
 #
-FROM wrale/docker-dna_base:12.04.w1
+FROM wrale/docker-dna_base:12.04
 MAINTAINER Joshua Dotson, josh@wrale.com
 
 # Update distribution

@@ -1,7 +1,7 @@
 # docker-dna/base/Dockerfile
 #
 # NAME       wrale/docker-dna_base
-# VERSION    12.04.w1
+# VERSION    12.04.w2
 #
 FROM ubuntu:12.04
 MAINTAINER Joshua Dotson, josh@wrale.com
@@ -15,6 +15,8 @@ RUN ( echo 'deb http://archive.ubuntu.com/ubuntu precise main' && \
     ) > /etc/apt/sources.list \
       && apt-mark hold upstart \
       && apt-mark hold initscripts \
+      && dpkg-divert --local --rename --add /sbin/initctl \
+      && ln -s /bin/true /sbin/initctl \
       && apt-get update \
       && apt-get upgrade -y \
       && apt-get clean
