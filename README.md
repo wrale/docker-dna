@@ -1,7 +1,7 @@
 docker-dna
 ==========
 
-DockerDNA Project: Docker + Ansible (local)
+DockerDNA Project: Create Ansible-provisioned Docker images.
 
 Getting Started
 ----
