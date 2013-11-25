@@ -7,7 +7,7 @@ Getting Started
 ----
 
 ### Render a DockerDNA-ready base image.  
-At this time, only Ubuntu 12.04 is supported.  I'll add others, if interest is apparent.
+Only Ubuntu 12.04 is supported at this time.  I'll add others if interest is apparent.
 
         git clone https://github.com/wrale/docker-dna.git
         cd ./docker-dna/base
