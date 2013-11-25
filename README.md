@@ -17,7 +17,9 @@ At this time, only Ubuntu 12.04 is supported.  I'll add others, if interest is a
         cd ../rabbitmq
         docker build -t yourname/docker-dna_rabbitmq:3.1.5 .
 
-Optionally, you can create your own DockerDNA role using Ansible role syntax.
+### Create your own DockerDNA roles using [Ansible Best Practices](http://www.ansibleworks.com/docs/playbooks_best_practices.html).
+
+Take a look at the zookeeper/ and rabbitmq/ directories for reference.
 
 
 ### Run the container you built:
